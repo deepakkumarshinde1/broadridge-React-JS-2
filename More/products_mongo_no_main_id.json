@@ -1,0 +1,24 @@
+[
+  {
+    "title": "Classic Black Hooded Sweatshirt",
+    "price": 79,
+    "category": {
+      "name": "Clothes"
+    },
+    "images": [
+      "https://i.imgur.com/cSytoSD.jpeg"
+    ],
+    "categoryId": 31
+  },
+  {
+    "title": "Classic Comfort Drawstring Joggers",
+    "price": 79,
+    "category": {
+      "name": "Clothes"
+    },
+    "images": [
+      "https://i.imgur.com/mp3rUty.jpeg"
+    ],
+    "categoryId": 31
+  }
+]
