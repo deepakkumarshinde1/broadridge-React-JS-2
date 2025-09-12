@@ -22,7 +22,7 @@ async function getCart(req, res) {
 }
 
 async function addToCart(req, res) {
-  const { productId, quantity } = req.body;
+  const { productId, quantity, image, productName } = req.body;
   if (!productId)
     return res.status(400).json({ message: "productId required" });
   const qty = quantity || 1;
@@ -34,7 +34,7 @@ async function addToCart(req, res) {
     if (!cart) cart = await Cart.create({ userId, items: [] });
     const item = cart.items.find((i) => i.productId.toString() === productId);
     if (item) item.quantity += qty;
-    else cart.items.push({ productId, quantity: qty });
+    else cart.items.push({ productId, quantity: qty, image, productName });
     await cart.save();
     return res.json(cart);
   }
